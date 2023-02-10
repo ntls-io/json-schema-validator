@@ -1,8 +1,12 @@
 import Vue from 'vue'
-import App from './App.vue'
+import Validate from "@/json-schema-validator.vue";
 
 Vue.config.productionTip = false
 
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+  el: '#app',
+  components: {
+    Validate
+  },
+  template: '<Validate />'
+})
