@@ -1,9 +1,12 @@
 {
-    "type": "object",
-    "properties": {
-        "name": {"type": "string"},
-        "gpa": {"type": "number"},
-        "age": {"type": "number"},
-        "salary": {"type": "number"}
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "name": {"type": "string"},
+            "gpa": {"type": "number"},
+            "age": {"type": "number"},
+            "salary": {"type": "number"}
+        }
     }
 }

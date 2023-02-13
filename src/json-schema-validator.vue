@@ -4,20 +4,20 @@
     <input type="file" id="dataFileInput" ref="dataFileInput" @change="uploadDataFile"/>
     <label for="schemaFileInput">Schema file:</label>
     <input type="file" id="schemaFileInput" ref="schemaFileInput" @change="uploadSchemaFile"/>
-    <button @click="validateDataAgainstSchema">Validate</button>
+    <button @click="validateDataAgainstSchema(data, schema)">Validate</button>
     <p v-if="validationResult">{{ validationResult }}</p>
   </div>
 </template>
 
 <script>
-import Ajv from 'ajv';
+import { validateMixin } from './mixins/validateMixin';
 
 export default {
+  mixins: [validateMixin],
   data() {
     return {
       data: null,
       schema: null,
-      validationResult: null,
     };
   },
   methods: {
@@ -40,14 +40,6 @@ export default {
       reader.onload = event => {
         this.schema = JSON.parse(event.target.result);
       };
-    },
-    async validateDataAgainstSchema() {
-      const ajv = new Ajv();
-      const validate = ajv.compile(this.schema);
-      const valid = validate(this.data);
-      this.validationResult = valid
-          ? 'Data is valid against the schema.'
-          : 'Data is invalid against the schema: ' + ajv.errorsText(validate.errors);
     },
   },
 };

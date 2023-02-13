@@ -1,4 +1,4 @@
-# json-schema-project
+# json-schema-validator
 
 ## Project setup
 ```
