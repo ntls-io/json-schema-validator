@@ -12,10 +12,5 @@
     "email": {
       "type": "string"
     }
-  },
-  "required": [
-    "name",
-    "age",
-    "email"
-  ]
+  }
 }

@@ -26,7 +26,7 @@
     {
         "name": "Tom Davis",
         "gpa": 3.8,
-        "age": "abc",
+        "age": 24,
         "salary": 72000
     }
 ]

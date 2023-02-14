@@ -3,10 +3,18 @@
     "items": {
         "type": "object",
         "properties": {
-            "name": {"type": "string"},
-            "gpa": {"type": "number"},
-            "age": {"type": "number"},
-            "salary": {"type": "number"}
+            "name": {
+                "type": "string"
+            },
+            "gpa": {
+                "type": "number"
+            },
+            "age": {
+                "type": "number"
+            },
+            "salary": {
+                "type": "number"
+            }
         }
     }
 }

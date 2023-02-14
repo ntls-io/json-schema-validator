@@ -4,8 +4,7 @@
     <input type="file" id="dataFileInput" ref="dataFileInput" @change="uploadDataFile"/>
     <label for="schemaFileInput">Schema file:</label>
     <input type="file" id="schemaFileInput" ref="schemaFileInput" @change="uploadSchemaFile"/>
-    <button @click="validateDataAgainstSchema(data, schema)">Validate</button>
-    <p v-if="validationResult">{{ validationResult }}</p>
+    <button @click="validate(data, schema)">Validate</button>
   </div>
 </template>
 
@@ -21,6 +20,10 @@ export default {
     };
   },
   methods: {
+    validate(data, schema) {
+      const result = this.validateDataAgainstSchema(data, schema);
+      console.log(result);
+    },
     async uploadDataFile() {
       const input = this.$refs.dataFileInput;
       const file = input.files[0];

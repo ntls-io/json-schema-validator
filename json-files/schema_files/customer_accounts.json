@@ -1,5 +1,4 @@
-{
-    "customers": [
+[
         {
             "Name": "John Smith",
             "Email": "johnsmith@email.com",
@@ -8,7 +7,7 @@
             "Credit Score": 300
         },
         {
-            "name": "Jane Doe",
+            "Name": "Jane Doe",
             "Email": "janedoe@email.com",
             "Account": 25023515,
             "Balance": 20500,
@@ -35,5 +34,4 @@
             "Balance": 33000,
             "Credit Score": 360
         }
-    ]
-}
+]
